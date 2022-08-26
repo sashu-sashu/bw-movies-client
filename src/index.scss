@@ -1,0 +1,16 @@
+$color: #1b1b1b ;
+$color2: #a3a3a3 ;
+$color3: #ffffff ;
+
+body, html{
+
+    background: $color;
+}
+
+.app-container {
+    width: 100%;
+    background: $color3;
+}
+.movieViewContainer{
+    background: $color;
+}
