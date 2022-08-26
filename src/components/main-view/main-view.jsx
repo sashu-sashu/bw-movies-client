@@ -72,13 +72,15 @@ onRegistration(registered) {
       <div className="main-view">
       <Navbar bg="light" expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#home">AppforMovies</Navbar.Brand>
+            <Navbar.Brand href="#home">10 Top Movies</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Profile</Nav.Link>
-              <Nav.Link href="#update">Update Profile</Nav.Link>
-              <Nav.Link href="#logout">Logout</Nav.Link>
-            </Nav>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="#profile">Profile</Nav.Link>
+                <Nav.Link href="#update">Edit Profile</Nav.Link>
+                <Nav.Link href="#logout">Logout</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
           </Container>
         </Navbar>
         <Container fluid className="mainViewContainer">
