@@ -4,6 +4,9 @@ import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { RegistrationView } from '../registration-view/registration-view';
+import { Container, Col, Row, Navbar, Nav } from 'react-bootstrap';
+
+import './main-view.scss';
 
 export class MainView extends React.Component {
   constructor(){
@@ -17,7 +20,8 @@ export class MainView extends React.Component {
 }
 
 componentDidMount(){
-    axios.get('https://bw-movies-server.herokuapp.com')
+    axios
+      .get('https://bw-movies-server.herokuapp.com')
       .then(response => {
         this.setState({
           movies: response.data
@@ -32,7 +36,7 @@ componentDidMount(){
 
 setSelectedMovie(newSelectedMovie) {
     this.setState({
-        selectedMovie: newSelectedMovie
+        selectedMovie: newSelectedMovie //or instead newSelectedMovie just movie?
     });
 }
 
@@ -66,13 +70,48 @@ onRegistration(registered) {
 
     return (
       <div className="main-view">
-        {selectedMovie 
-          ? <MovieView movie={selectedMovie} on BackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-          : movies.map(movie => (
-          <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
-         ))
-        }
-      </div>
-    );
-  }
-} 
+      <Navbar bg="light" expand="lg">
+          <Container fluid>
+            <Navbar.Brand href="#home">AppforMovies</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Profile</Nav.Link>
+              <Nav.Link href="#update">Update Profile</Nav.Link>
+              <Nav.Link href="#logout">Logout</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+        <Container fluid className="mainViewContainer">
+        {selectedMovie ? (
+          <Row className="justify-content-md-center">
+            <Col md={8}>
+              <MovieView
+                movie={selectedMovie}
+                onBackClick={(newSelectedMovie) => {
+                  this.setSelectedMovie(newSelectedMovie);
+                }}
+              />
+            </Col>
+          </Row>
+        ) : (
+          <Row className="justify-content-md-center">
+            {movies.map((movie) => (
+              <Col lg={3} md={4} sm={6}>
+                <MovieCard
+                  key={movie._id}
+                  movie={movie}
+                  onMovieClick={(newSelectedMovie) => {
+                    this.setSelectedMovie(newSelectedMovie);
+                  }}
+                />
+              </Col>
+            ))}
+          </Row>
+        )}
+      </Container>
+    </div>
+  );
+}
+}
+
+export default MainView;

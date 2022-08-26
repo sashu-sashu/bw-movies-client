@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Form, Button, Card, CardGroup, Container, Col, Row, Navbar, Nav } from 'react-bootstrap';
 
 export function LoginView(props) {
   const [username, setUsername] = useState('');
@@ -15,20 +14,53 @@ export function LoginView(props) {
 
 
   return (
-    <Form>
-      <Form.Group controlId="formUsername">
-        <Form.Label>Username:</Form.Label>
-        <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
-      </Form.Group>
-
-      <Form.Group controlId="formPassword">
-        <Form.Label>Password:</Form.Label>
-        <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
-      </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
-    </Form>
+    <Container fluid className="loginContainer my-3 mx-12 ">
+        <Navbar bg="light" expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="#home">AppforMovies</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#Register">Register</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <Row>
+        <Col>
+          <CardGroup>
+            <Card>
+              <Card.Body className="mt-3 ">
+                <Card.Title>10 TOP BLACK AND WHITE MOVIES</Card.Title>
+                <Form>
+                  <Form.Group controlId="formUserName">
+                    <Form.Label>Username:</Form.Label>
+                    <Form.Control
+                      type="text"
+                      onChange={(e) => setUsername(e.target.value)}
+                      required
+                      placeholder="Enter Username"
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formPassword">
+                    <Form.Label>Password:</Form.Label>
+                    <Form.Control
+                      type="password"
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                      placeholder="Enter Password"
+                    />
+                  </Form.Group>
+                  <Button className="mt-3" variant="primary" type="submit" onClick={handleSubmit}>
+                    Submit
+                  </Button>
+                </Form>
+              </Card.Body>
+            </Card>
+          </CardGroup>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
