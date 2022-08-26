@@ -17,7 +17,7 @@ export class MainView extends React.Component {
 }
 
 componentDidMount(){
-    axios.get('https://git.heroku.com/bw-movies-server.git')
+    axios.get('https://bw-movies-server.herokuapp.com')
       .then(response => {
         this.setState({
           movies: response.data
@@ -53,7 +53,7 @@ onRegistration(registered) {
 
  render() {
     const { movies, selectedMovie, user, registered } = this.state;
-            /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/
+            /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are passed as a prop to the LoginView*/
         if (!user) return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
 
 
