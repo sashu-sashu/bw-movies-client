@@ -72,7 +72,7 @@ onRegistration(registered) {
       <div className="main-view">
       <Navbar bg="light" expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#home">10 Top Movies</Navbar.Brand>
+            <Navbar.Brand href="#home">Top 10 Movies</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -115,5 +115,3 @@ onRegistration(registered) {
   );
 }
 }
-
-export default MainView;

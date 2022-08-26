@@ -17,7 +17,7 @@ export function LoginView(props) {
     <Container fluid className="loginContainer my-3 mx-12 ">
         <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home">AppforMovies</Navbar.Brand>
+          <Navbar.Brand href="#home">Top 10 movies</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -31,7 +31,7 @@ export function LoginView(props) {
           <CardGroup>
             <Card>
               <Card.Body className="mt-3 ">
-                <Card.Title>10 TOP BLACK AND WHITE MOVIES</Card.Title>
+                <Card.Title>Top 10 Movies</Card.Title>
                 <Form>
                   <Form.Group controlId="formUserName">
                     <Form.Label>Username:</Form.Label>
