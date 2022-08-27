@@ -5,11 +5,13 @@ import { Form, Button, Card, CardGroup, Container, Col, Row, Navbar, Nav } from 
 import './registration-view.scss';
 
 
-export function RegistrationView(props) {
+export const RegistrationView = (props) => {
     const [ username, setUsername ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ birthday, setBirthday ] = useState('');
+
+    console.log(props)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -83,8 +85,8 @@ export function RegistrationView(props) {
                       Birthdate:
                       <Form.Control
                         type="date"
-                        value={birthdate}
-                        onChange={(e) => setBirthdate(e.target.value)}
+                        value={birthday}
+                        onChange={(e) => setBirthday(e.target.value)}
                         placeholder="30.01.1990"
                         required
                       />

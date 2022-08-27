@@ -1,13 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+// Bootstrap Bundle JS
 import {MainView} from './components/main-view/main-view';
 import Container from 'react-bootstrap/Container';
+
 
 // Import statement to indicate that you need to bundle `./index.scss`
 import './index.scss';
 
 // Main component (will eventually use all the others)
-class bwMoviesApplication extends React.Component {
+class BWMoviesApplication extends React.Component {
   render() {
     return (
       <Container>
@@ -17,7 +19,8 @@ class bwMoviesApplication extends React.Component {
   }
 }
 // Finds the root of your app
-const container = document.getElementById('app-container');
+const container = document.getElementById('root');
 
-// Tells React to render your app in the root DOM element
-ReactDOM.render(React.createElement(bwMoviesApplication), container);
+const root = ReactDOM.createRoot(container);
+
+root.render(<BWMoviesApplication />)
