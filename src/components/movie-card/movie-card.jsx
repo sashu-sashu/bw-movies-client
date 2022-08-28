@@ -32,7 +32,6 @@ export class MovieCard extends React.Component {
     );
   }
 }
-//ImagePath or ImageURL?
 
 MovieCard.propTypes = {
     movie: PropTypes.shape({

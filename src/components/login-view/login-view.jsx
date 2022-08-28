@@ -9,29 +9,24 @@ export function LoginView(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  //mocked movies response (from dist/movies.json)
-  axios.get('./movies.json').then(response => {
-    console.log(response.data)
-  })
-
   const handleSubmit = (e) => {
     e.preventDefault();
     /* Send a request to the server for authentication */
+  console.log(username, password, props)
 
-    console.log(username, password, props)
-    console.log('will send data to server when api app will work')
-    // axios
-    //   .post('https://bw-movies-server.herokuapp.com/login', {
-    //     Username: username,
-    //     Password: password,
-    //   })
-    //   .then((response) => {
-    //     const data = response.data;
-    //     props.onLoggedIn(data);
-    //   })
-    //   .catch((e) => {
-    //     console.log(e.target,'no such user');
-    //   });
+
+    axios
+       .post('https://bw-movies-server.herokuapp.com/login', {
+         Username: username,
+         Password: password,
+       })
+       .then((response) => {
+         const data = response.data;
+         props.onLoggedIn(data);
+       })
+       .catch((e) => {
+         console.log(e.target,'no such user');
+       });
   };
 
   return (

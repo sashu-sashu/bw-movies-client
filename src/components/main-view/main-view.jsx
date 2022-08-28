@@ -15,13 +15,13 @@ export class MainView extends React.Component {
     this.state = {
       movies: [],
       user: null,
-      selectedMovie: null, //
+      selectedMovie: null
     };
   }
 
   componentDidMount() {
     axios
-      .get('https://bw-movies-server.herokuapp.com')
+      .get('https://bw-movies-server.herokuapp.com/movies')
       .then(response => {
         this.setState({
           movies: response.data
@@ -31,6 +31,12 @@ export class MainView extends React.Component {
         console.log(error);
       });
   }
+
+  setSelectedMovie(newSelectedMovie) {
+    this.setState({
+        selectedMovie: newSelectedMovie 
+    });
+}
 
 
   onLoggedIn(user) {
