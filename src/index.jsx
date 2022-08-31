@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-// Bootstrap Bundle JS
-import {MainView} from './components/main-view/main-view';
+import ReactDOM from 'react-dom';
+import { MainView } from './components/main-view/main-view';
 import Container from 'react-bootstrap/Container';
 
 
@@ -19,6 +18,11 @@ class BWMoviesApplication extends React.Component {
   }
 }
 // Finds the root of your app
+//const container = document.getElementsByClassName('app-container')[0];
+
+// Tells React to render your app in the root DOM element
+//ReactDOM.render(React.createElement(BWMoviesApplication), container);
+
 const container = document.getElementById('root');
 
 const root = ReactDOM.createRoot(container);

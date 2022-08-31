@@ -1,85 +1,112 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import axios from 'axios';
-import { Form, Button, Card, CardGroup, Container, Col, Row, Navbar, Nav } from 'react-bootstrap';
+import { Form, Button, Card, Container, Col, Row } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 import './login-view.scss';
 
 export function LoginView(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [usernameErr, setUsernameErr] = useState('');
+  const [passwordErr, setPasswordErr] = useState('');
+
+  // validate user inputs
+  const validate = () => {
+    let isReq = true;
+    if (!username) {
+      setUsernameErr("Username Required");
+      isReq = false;
+    } else if (username.length < 5) {
+      setUsernameErr("Username must be atleast 5 characters long");
+      isReq = false;
+    }
+    if (!password) {
+      setPasswordErr("Password Required");
+      isReq = false;
+    } else if (password.length < 6) {
+      setPassword("Password must be atleast 6 characters long");
+      isReq = false;
+    }
+
+    return isReq;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /* Send a request to the server for authentication */
-  console.log(username, password, props)
-
-
-    axios
-       .post('https://bw-movies-server.herokuapp.com/login', {
-         Username: username,
-         Password: password,
-       })
-       .then((response) => {
-         const data = response.data;
-         props.onLoggedIn(data);
-       })
-       .catch((e) => {
-         console.log(e.target,'no such user');
-       });
+    const isReq = validate();
+    if (isReq) {
+      /* Send a request to the server for authentication */
+      axios
+        .post("https://bw-movies-server.herokuapp.com/login", {
+          Username: username,
+          Password: password,
+        })
+        .then((response) => {
+          const data = response.data;
+          props.onLoggedIn(data);
+        })
+        .catch((err) => {
+          console.log(err, "no such user");
+        });
+    }
   };
 
   return (
-    <Container fluid className="loginContainer my-3 mx-12 ">
-      <Navbar bg="light" expand="lg">
-        <Container fluid>
-          <Navbar.Brand href="#home">Top 10 BW Movies</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#Register">Register</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Row>
-        <Col>
-          <CardGroup>
-            <Card>
-              <Card.Body className="mt-3 ">
-                <Card.Title>Welcome to Top 10 BW Movies</Card.Title>
-                <Form>
-                  <Form.Group controlId="formUserName">
-                    <Form.Label>Username:</Form.Label>
-                    <Form.Control
-                      type="text"
-                      onChange={(e) => setUsername(e.target.value)}
-                      required
-                      placeholder="Enter Username"
-                    />
-                  </Form.Group>
+    <Container>
+    <Row>
+      <Col></Col>
+      <Col>
+        <Card className="login">
+          <Card.Body>
+            <Card.Title>Log in</Card.Title>
+            <Form>
+              <Form.Group controlId="formUsername">
+                <Form.Label>Username:</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+                {/* code added here to display validation error */}
+                {usernameErr && <p>{usernameErr}</p>}
+              </Form.Group>
 
-                  <Form.Group controlId="formPassword">
-                    <Form.Label>Password:</Form.Label>
-                    <Form.Control
-                      type="password"
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                      placeholder="Enter Password"
-                    />
-                  </Form.Group>
-                  <Button className="mt-3" variant="primary" type="submit" onClick={handleSubmit}>
-                    Submit
-                  </Button>
-                </Form>
-              </Card.Body>
-            </Card>
-          </CardGroup>
-        </Col>
-      </Row>
-    </Container>
-  );
+              <Form.Group controlId="formPassword">
+                <Form.Label>Password:</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                {/* code added here to display validation error */}
+                {passwordErr && <p>{passwordErr}</p>}
+              </Form.Group>
+              <Button
+                className="login-button"
+                variant="primary"
+                type="submit"
+                onClick={handleSubmit}
+              >
+                Submit
+              </Button>
+              <br></br>
+              <p>
+                Need an account? <Link to={"/register"}>Sign up</Link>
+              </p>
+            </Form>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col></Col>
+    </Row>
+  </Container>
+);
 }
+
 
 LoginView.propTypes = {
   user: PropTypes.shape({
