@@ -2,6 +2,7 @@
   "name": "bw-movies-client",
   "version": "1.0.0",
   "source": "src/index.html",
+  "type": "module",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
@@ -21,7 +22,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.0"
+    "react-router-dom": "^5.3.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
