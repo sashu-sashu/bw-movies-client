@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-$color: #1b1b1b ;
+$color: #1b1b1b;
 $color2: #a3a3a3 ;
 $color3: #ffffff ;
 
@@ -14,4 +14,20 @@ body, html{
 }
 .movieViewContainer{
     background: $color;
+}
+
+html {
+    background-color: $color;
+    font-size: 1.3rem;
+}
+
+.app-container {
+    background-color: $color;
+    color: $color2;
+    color: $color3;
+}
+
+.btn.btn-primary {
+    background-color: $color;
+
 }
