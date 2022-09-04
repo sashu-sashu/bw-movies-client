@@ -1,43 +1,43 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
 import axios from 'axios';
-import { Form, Button, Card, Container, Col, Row } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Form, Button } from 'react-bootstrap';
 
 import './login-view.scss';
 
 export function LoginView(props) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [usernameErr, setUsernameErr] = useState('');
-  const [passwordErr, setPasswordErr] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  // validate user inputs
+  const [usernameErr, setUsernameErr] = useState("");
+  const [passwordErr, setPasswordErr] = useState("");
+
   const validate = () => {
     let isReq = true;
     if (!username) {
       setUsernameErr("Username Required");
       isReq = false;
     } else if (username.length < 5) {
-      setUsernameErr("Username must be atleast 5 characters long");
+      setUsernameErr("Username must be at least 5 characters long");
       isReq = false;
     }
     if (!password) {
       setPasswordErr("Password Required");
       isReq = false;
     } else if (password.length < 6) {
-      setPassword("Password must be atleast 6 characters long");
+      setPasswordErr("Password must be at least 6 characters long");
       isReq = false;
     }
-
     return isReq;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    /* console.log(username, password);
+    props.onLoggedIn(username); */
     const isReq = validate();
     if (isReq) {
-      /* Send a request to the server for authentication */
+      // Send a request to the server for authentication
       axios
         .post("https://bw-movies-server.herokuapp.com/login", {
           Username: username,
@@ -54,59 +54,39 @@ export function LoginView(props) {
   };
 
   return (
-    <Container>
-    <Row>
-      <Col></Col>
-      <Col>
-        <Card className="login">
-          <Card.Body>
-            <Card.Title>Log in</Card.Title>
-            <Form>
-              <Form.Group controlId="formUsername">
-                <Form.Label>Username:</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-                {/* code added here to display validation error */}
-                {usernameErr && <p>{usernameErr}</p>}
-              </Form.Group>
+    <Form>
+      <h2 className="mb-3 mx-auto mt-5">Login to BW movies</h2>
+      <Form.Group className="mb-3 mx-auto mt-4" controlId="formUsername">
+        <Form.Label>Username:</Form.Label>
+        <Form.Control
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+          placeholder="Enter a username"
+        />
+        {usernameErr && <p>{usernameErr}</p>}
+      </Form.Group>
 
-              <Form.Group controlId="formPassword">
-                <Form.Label>Password:</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                {/* code added here to display validation error */}
-                {passwordErr && <p>{passwordErr}</p>}
-              </Form.Group>
-              <Button
-                className="login-button"
-                variant="primary"
-                type="submit"
-                onClick={handleSubmit}
-              >
-                Submit
-              </Button>
-              <br></br>
-              <p>
-                Need an account? <Link to={"/register"}>Sign up</Link>
-              </p>
-            </Form>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col></Col>
-    </Row>
-  </Container>
-);
+      <Form.Group className="mb-3 mx-auto mt-4">
+        <Form.Label>Password:</Form.Label>
+        <Form.Control
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          minLength="8"
+          placeholder=""
+        />
+        {passwordErr && <p>{passwordErr}</p>}
+      </Form.Group>
+
+      <Button className="mt-4" type="submit" onClick={handleSubmit}>
+        Submit
+      </Button>
+    </Form>
+  );
 }
-
 
 LoginView.propTypes = {
   user: PropTypes.shape({
