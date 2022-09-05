@@ -1,7 +1,7 @@
 {
   "name": "bw-movies-client",
   "version": "1.0.0",
-  "source": "src/index.html",
+  "main": "src/index.html",
   "type": "module",
   "scripts": {
     "start": "parcel",
@@ -32,7 +32,7 @@
     "buffer": "^6.0.3",
     "eslint": "^8.22.0",
     "eslint-plugin-react": "^7.31.0",
-    "parcel": "^2.6.0",
+    "parcel": "^2.7.0",
     "process": "^0.11.10"
   },
   "rules": {
