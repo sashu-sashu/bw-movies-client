@@ -1,0 +1,102 @@
+[{
+  "_id": {
+    "$oid": "62f524aecb8121ed39c7551c"
+  },
+  "Username": "Captain Sharp",
+  "Password": "6780",
+  "Email": "johndoe@example.com",
+  "Birthday": "12/09/1946",
+  "FavoriteMovies": [
+    {
+      "$oid": "62f51e8fcb8121ed39c75515"
+    },
+    {
+      "$oid": "62f52160cb8121ed39c7551b"
+    },
+    {
+      "$oid": "62f52100cb8121ed39c75519"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62f52507cb8121ed39c7551d"
+  },
+  "Username": "Scout Master Randy Ward",
+  "Password": "2233",
+  "Email": "r.ward@example.com",
+  "Birthday": "01/01/1956",
+  "FavoriteMovies": [
+    {
+      "$oid": "62f519d7cb8121ed39c75512"
+    },
+    {
+      "$oid": "62f52061cb8121ed39c75518"
+    },
+    {
+      "$oid": "62f51e8fcb8121ed39c75515"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62f526cfcb8121ed39c7551f"
+  },
+  "Username": "Sam",
+  "Password": "dta2",
+  "Email": "sam@example.com",
+  "Birthday": "11/05/1972",
+  "FavoriteMovies": [
+    {
+      "$oid": "62f51a04cb8121ed39c75513"
+    },
+    {
+      "$oid": "62f51e8fcb8121ed39c75515"
+    },
+    {
+      "$oid": "62f52160cb8121ed39c7551b"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62f526f7cb8121ed39c75520"
+  },
+  "Username": "Suzy Gallahan",
+  "Password": "wyslf",
+  "Email": "suzy@example.com",
+  "Birthday": "01/01/1975",
+  "FavoriteMovies": [
+    {
+      "$oid": "62f51a77cb8121ed39c75514"
+    },
+    {
+      "$oid": "62f51ffbcb8121ed39c75517"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "62fb7debbfb49be06120027b"
+  },
+  "Username": "Samita Ditta",
+  "Password": "sadta2",
+  "Email": "samita@example.com",
+  "Birthday": {
+    "$date": {
+      "$numberLong": "66787200000"
+    }
+  },
+  "FavoriteMovies": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fb89a899aeb5490800489b"
+  },
+  "Username": "Janet",
+  "Password": "jjanett",
+  "Email": "janet@example.com",
+  "Birthday": {
+    "$date": {
+      "$numberLong": "90111600000"
+    }
+  },
+  "FavoriteMovies": [],
+  "__v": 0
+}]

@@ -1,0 +1,41 @@
+{
+  "name": "bw-movies-client",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "type": "module",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aleksandra Tiede",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sashu-sashu/bw-movies-client.git"
+  },
+  "description": "",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^5.3.3",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
+    "eslint": "^8.22.0",
+    "eslint-plugin-react": "^7.31.0",
+    "parcel": "^2.6.0",
+    "process": "^0.11.10"
+  },
+  "rules": {
+    "react/prop-types": "off"
+  }
+}

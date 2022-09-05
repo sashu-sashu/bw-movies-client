@@ -1,0 +1,191 @@
+[{
+  "_id": {
+    "$oid": "62f519d7cb8121ed39c75512"
+  },
+  "Title": "Coffee and Cigarettes",
+  "Description": "A series of vignettes that all have coffee and cigarettes in common.",
+  "Director": {
+    "Name": "Jim Jarmusch",
+    "BIO": "James Robert Jarmusch is an American film director and screenwriter. He has been a major proponent of independent cinema since the 1980s, directing films including Stranger Than Paradise (1984), Down by Law (1986), Mystery Train (1989), Dead Man (1995), Ghost Dog: The Way of the Samurai (1999), Coffee and Cigarettes (2003), Broken Flowers (2005), Only Lovers Left Alive (2013), Paterson (2016), and The Dead Don't Die (2019). Stranger Than Paradise was added to the National Film Registry in December 2002.[4] As a musician Jarmusch has composed music for his films and released three albums with Jozef van Wissem.",
+    "Birth": "1953-01-22",
+    "Death": null
+  },
+  "Year": "2003",
+  "Duration": "1h 35m",
+  "Genre": {
+    "Name": "Comedy drama",
+    "Description": "Comedy drama is a genre of dramatic works that combines elements of comedy and drama. As such, it is also known by the portmanteau dramedy."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BYzQxNGU2ZmMtOGVkMS00NGIxLWJjZWUtYjNiNTIwMzVkOGRlXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_FMjpg_UX842_.jpg"
+},{
+  "_id": {
+    "$oid": "62f51a04cb8121ed39c75513"
+  },
+  "Title": "Schindler's List",
+  "Description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+  "Director": {
+    "Name": "Steven Spielberg",
+    "BIO": " Steven Allan Spielberg is an American film director, producer, and screenwriter. A figure of the New Hollywood era, he is the most commercially successful director of all time. Spielberg is the recipient of various accolades, including three Academy Awards (including two Best Director wins), a Kennedy Center honor, a Cecil B. DeMille Award, and an AFI Life Achievement Award. Time magazine named him one of the 100 Most Important People of the Century in 2013.",
+    "Birth": "1946-12-18",
+    "Death": null
+  },
+  "Year": "1993",
+  "Duration": "3h 15m",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "Drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BNzczOWJlYTAtMDQ1Yy00MWU5LTk3Y2QtMWEyOGRiMjFkMTJmXkEyXkFqcGdeQXVyNTc5OTMwOTQ@._V1_FMjpg_UX606_.jpg"
+},{
+  "_id": {
+    "$oid": "62f51a77cb8121ed39c75514"
+  },
+  "Title": "Metropolis",
+  "Description": "In a futuristic city sharply divided between the working class and the city planners, the son of the city's mastermind falls in love with a working-class prophet who predicts the coming of a savior to mediate their differences.",
+  "Director": {
+    "Name": "Fritz Lang",
+    "BIO": "Friedrich Christian Anton Lang known as Fritz Lang, was an Austrian film director, screenwriter, and producer who worked in Germany and later the United States. One of the best-known émigrés from Germany/'s school of Expressionism, he was dubbed the \"Master of Darkness\" by the British Film Institute. He has been cited as one of the most influential filmmakers of all time.",
+    "Birth": "1890-12-05",
+    "Death": "1976-08-02"
+  },
+  "Year": "1926",
+  "Duration": "2h 33m",
+  "Genre": {
+    "Name": "Sci-Fi",
+    "Description": "Science Fiction (sometimes shortened to Sci-Fi) is a genre of speculative fiction which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, extraterrestrial life, sentient artificial intelligence, cybernetics, certain forms of immortality (like mind uploading), and the singularity. Science fiction predicted several existing inventions, such as the atomic bomb, robots and borazon, whose names entirely match their fictional predecessors."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BMTg5YWIyMWUtZDY5My00Zjc1LTljOTctYmI0MWRmY2M2NmRkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX559_.jpg"
+},{
+  "_id": {
+    "$oid": "62f51e8fcb8121ed39c75515"
+  },
+  "Title": "Psycho",
+  "Description": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+  "Director": {
+    "Name": "Alfred Hitchcock",
+    "BIO": "Sir Alfred Joseph Hitchcock was an English filmmaker widely regarded as one of the most influential figures in the history of cinema. In a career spanning six decades, he directed over 50 feature films, many of which are still widely watched and studied today. Known as the \"Master of Suspense\", he became as well known as any of his actors thanks to his many interviews, his cameo roles in most of his films, and his hosting and producing the television anthology Alfred Hitchcock Presents (1955-65). His films garnered 46 Academy Award nominations, including six wins, although he never won the award for Best Director despite five nominations.",
+    "Birth": "1899-08-13",
+    "Death": "1980-04-29"
+  },
+  "Year": "1960",
+  "Duration": "1h 49m",
+  "Genre": {
+    "Name": "Triller",
+    "Description": "Thriller is a genre of fiction, having numerous, often overlapping subgenres. Thrillers are characterized and defined by the moods they elicit, giving viewers heightened feelings of suspense, excitement, surprise, anticipation and anxiety. Successful examples of thrillers are the films of Alfred Hitchcock."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+},{
+  "_id": {
+    "$oid": "62f51fcdcb8121ed39c75516"
+  },
+  "Title": "To Kill A Mockingbird",
+  "Description": "Atticus Finch, a widowed lawyer in Depression-era Alabama, defends a black man against an undeserved rape charge, and his children against prejudice.",
+  "Director": {
+    "Name": "Robert Mulligan",
+    "BIO": "Robert Patrick Mulligan was an American director and producer. He is best known for his humanist dramas, including To Kill a Mockingbird (1962), Summer of '42 (1971), The Other (1972), Same Time, Next Year (1978), and The Man in the Moon (1991). He was also known in the 1960s for his extensive collaborations with producer Alan J. Pakula.",
+    "Birth": "1925-08-23",
+    "Death": "2008-12-20"
+  },
+  "Year": "1962",
+  "Duration": "2h 9m",
+  "Genre": {
+    "Name": "Crime",
+    "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+},{
+  "_id": {
+    "$oid": "62f51ffbcb8121ed39c75517"
+  },
+  "Title": "All About Eve",
+  "Description": "A seemingly timid but secretly ruthless ingénue insinuates herself into the lives of an aging Broadway star and her circle of theater friends.",
+  "Director": {
+    "Name": "Joseph L. Mankiewicz",
+    "BIO": "Joseph Leo Mankiewicz was an American film director, screenwriter, and producer. Mankiewicz had a long Hollywood career, and won both the Academy Award for Best Director and the Academy Award for Best Adapted Screenplay in consecutive years for A Letter to Three Wives (1949) and All About Eve (1950), the latter of which was nominated for 14 Academy Awards and won six.",
+    "Birth": "1909-02-11",
+    "Death": "1993-02-05"
+  },
+  "Year": "1950",
+  "Duration": "2h 18m",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "Drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BMTY2MTAzODI5NV5BMl5BanBnXkFtZTgwMjM4NzQ0MjE@._V1_FMjpg_UX1000_.jpg"
+},{
+  "_id": {
+    "$oid": "62f52061cb8121ed39c75518"
+  },
+  "Title": "La Dolce Vita",
+  "Description": "A series of stories following a week in the life of a philandering tabloid journalist living in Rome.",
+  "Director": {
+    "Name": "Federico Fellini",
+    "BIO": "Federico Fellini was an Italian film Director and screenwriter known for his distinctive style, which blends fantasy and baroque images with earthiness. He is recognized as one of the greatest and most influential filmmakers of all time. His films have ranked highly in critical polls such as that of Cahiers du Cinéma and Sight & Sound, which lists his 1963 film 8+1/2 as the 10th-greatest film.",
+    "Birth": "1920-01-20",
+    "Death": "1993-10-31"
+  },
+  "Year": "1960",
+  "Duration": "2h 54m",
+  "Genre": {
+    "Name": "Comedy drama",
+    "Description": "Comedy drama is a genre of dramatic works that combines elements of comedy and drama. As such, it is also known by the portmanteau dramedy."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BODQ0NzY5NGEtYTc5NC00Yjg4LTg4Y2QtZjE2MTkyYTNmNmU2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_.jpg"
+},{
+  "_id": {
+    "$oid": "62f52100cb8121ed39c75519"
+  },
+  "Title": "The Seventh Seal",
+  "Description": "A knight returning to Sweden after the Crusades seeks answers about life, death, and the existence of God as he plays chess against the Grim Reaper during the Black Plague.",
+  "Director": {
+    "Name": "Ingmar Bergman",
+    "BIO": "Ernst Ingmar Bergman was a Swedish film director, screenwriter, producer and playwright. Widely considered one of the greatest and most influential filmmakers of all time, his films are known as \"profoundly personal meditations into the myriad struggles facing the psyche and the soul.\"",
+    "Birth": "1918-07-14",
+    "Death": "2007-07-30"
+  },
+  "Year": "1957",
+  "Duration": "1h 36m",
+  "Genre": {
+    "Name": "Fantasy",
+    "Description": "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BM2I1ZWU4YjMtYzU0My00YmMzLWFmNTAtZDJhZGYwMmI3YWQ5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
+},{
+  "_id": {
+    "$oid": "62f5212dcb8121ed39c7551a"
+  },
+  "Title": "Modern Times",
+  "Description": "The Tramp struggles to live in modern industrial society with the help of a young homeless woman.",
+  "Director": {
+    "Name": "Charles Chaplin",
+    "BIO": "JSir Charles Spencer Chaplin Jr. KBE (16 April 1889 – 25 December 1977) was an English comic actor, filmmaker, and composer who rose to fame in the era of silent film. He became a worldwide icon through his screen persona, the Tramp, and is considered one of the film industry's most important figures. His career spanned more than 75 years, from childhood in the Victorian era until a year before his death in 1977, and encompassed both adulation and controversy.",
+    "Birth": "1889-04-16",
+    "Death": "1977-12-25"
+  },
+  "Year": "1936",
+  "Duration": "1h 27m",
+  "Genre": {
+    "Name": "Comedy",
+    "Description": "Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BYjJiZjMzYzktNjU0NS00OTkxLWEwYzItYzdhYWJjN2QzMTRlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX578_.jpg"
+},{
+  "_id": {
+    "$oid": "62f52160cb8121ed39c7551b"
+  },
+  "Title": "8½",
+  "Description": "A harried movie director retreats into his memories and fantasies.",
+  "Director": {
+    "Name": "Federico Fellini",
+    "BIO": "Federico Fellini was an Italian film Director and screenwriter known for his distinctive style, which blends fantasy and baroque images with earthiness. He is recognized as one of the greatest and most influential filmmakers of all time. His films have ranked highly in critical polls such as that of Cahiers du Cinéma and Sight & Sound, which lists his 1963 film 8+1/2 as the 10th-greatest film.",
+    "Birth": "1920-01-20",
+    "Death": "1993-10-31"
+  },
+  "Year": "1963",
+  "Duration": "138 min",
+  "Genre": {
+    "Name": "Drama",
+    "Description": "Drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone."
+  },
+  "ImageURL": "https://m.media-amazon.com/images/M/MV5BNTkzZTZjOTgtYjgzMS00MTdkLWE2NDAtNTVmM2I3MGYyM2I0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1050_.jpg"
+}]
