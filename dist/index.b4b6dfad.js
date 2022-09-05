@@ -46662,7 +46662,7 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _reactBootstrap = require("react-bootstrap");
 var _registrationViewScss = require("./registration-view.scss");
 var _s = $RefreshSig$();
-function RegistrationView(props) {
+function RegistrationView() {
     _s();
     const [username, setUsername] = (0, _react.useState)("");
     const [password, setPassword] = (0, _react.useState)("");
@@ -46738,7 +46738,7 @@ function RegistrationView(props) {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 className: "mb-3 mx-auto mt-5",
-                children: "BW movies Registration"
+                children: "BW Movies Registration"
             }, void 0, false, {
                 fileName: "src/components/registration-view/registration-view.jsx",
                 lineNumber: 78,
@@ -49008,7 +49008,7 @@ function Navbar({ username  }) {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Brand, {
                 className: "text-light",
-                children: "BW movies"
+                children: "BW Movies"
             }, void 0, false, {
                 fileName: "src/components/navbar/navbar.jsx",
                 lineNumber: 28,

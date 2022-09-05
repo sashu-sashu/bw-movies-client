@@ -6,7 +6,7 @@ import { Form, Button} from 'react-bootstrap';
 import './registration-view.scss';
 
 
-export function RegistrationView(props) {
+export function RegistrationView() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -75,7 +75,7 @@ export function RegistrationView(props) {
 
   return (
     <Form>
-      <h2 className="mb-3 mx-auto mt-5">BW movies Registration</h2>
+      <h2 className="mb-3 mx-auto mt-5">BW Movies Registration</h2>
 
       <Form.Group className="mb-3 mx-auto mt-4" controlId="formUsername">
         <Form.Label>Username:</Form.Label>

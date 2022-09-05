@@ -25,7 +25,7 @@ export function Navbar({ username }) {
   return (
     <NavMenu className="main-nav" expand="lg">
       {/* <Container> */}
-      <NavMenu.Brand className="text-light">BW movies</NavMenu.Brand>
+      <NavMenu.Brand className="text-light">BW Movies</NavMenu.Brand>
       <NavMenu.Toggle aria-controls="basic-navbar-nav" />
       <NavMenu.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
