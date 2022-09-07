@@ -24,7 +24,7 @@
 }
 
 .main-nav {
-  background-color: #1b1b1b;
+  background-color: #5fa7ff;
   margin-bottom: 60px;
   padding: 0;
 }
@@ -12063,7 +12063,7 @@ textarea.form-control-lg {
 }
 
 body, html {
-  background: #1b1b1b;
+  background: #5fa7ff;
 }
 
 .app-container {
@@ -12072,22 +12072,22 @@ body, html {
 }
 
 .movieViewContainer {
-  background: #1b1b1b;
+  background: #5fa7ff;
 }
 
 html {
-  background-color: #1b1b1b;
+  background-color: #5fa7ff;
   font-size: 1.3rem;
 }
 
 .app-container {
   color: #a3a3a3;
   color: #fff;
-  background-color: #1b1b1b;
+  background-color: #5fa7ff;
 }
 
 .btn.btn-primary {
-  background-color: #1b1b1b;
+  background-color: #5fa7ff;
 }
 
 /*# sourceMappingURL=index.27d8da6b.css.map */
