@@ -1,7 +1,7 @@
 {
   "name": "bw-movies-client",
   "version": "1.0.0",
-  "main": "src/index.html",
+  "source": "src/index.html",
   "type": "module",
   "scripts": {
     "start": "parcel",
