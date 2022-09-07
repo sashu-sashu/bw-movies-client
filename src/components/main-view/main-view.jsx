@@ -2,6 +2,9 @@ import React from "react";
 import axios from "axios";
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { Row, Col, Container } from "react-bootstrap";
+import PropTypes from "prop-types";
+
 import ProfileView from "../profile-view/profile-view";
 import { LoginView } from "../login-view/login-view";
 import { RegistrationView } from "../registration-view/registration-view";
@@ -9,7 +12,6 @@ import { MovieView } from "../movie-view/movie-view";
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { Navbar } from "../navbar/navbar";
-import { Row, Col, Container } from "react-bootstrap";
 import { setMovies, setUsers } from "../../actions/actions"; //
 import MoviesList from "../movies-list/movies-list"; //
 
@@ -17,9 +19,9 @@ import MoviesList from "../movies-list/movies-list"; //
 import "./main-view.scss";
 
 class MainView extends React.Component {
-  constructor() {
-    super();
-    this.state = {
+  constructor(props) {
+    super(props);
+    this.props = {
       user: null,
       movies: [],
     };
@@ -28,7 +30,7 @@ class MainView extends React.Component {
   componentDidMount() {
     let accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
-      this.setState({ user: localStorage.getItem("user") });
+      this.props({ user: localStorage.getItem("user") });
       this.getMovies(accessToken);
     }
   }
@@ -38,7 +40,7 @@ class MainView extends React.Component {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        this.setState({
+        this.props({
           movies: response.data,
         });
       })
@@ -49,7 +51,7 @@ class MainView extends React.Component {
 
   onLoggedIn(authData) {
     console.log(authData);
-    this.setState({
+    this.props({
       user: authData.user.Username,
     });
 
@@ -59,8 +61,8 @@ class MainView extends React.Component {
   }
 
   render() {
-    let { user } = this.state;
-    let { movies } = this.state;
+    let { user } = this.props;
+    let { movies } = this.props;
     console.log("MainView render");
 
     return (
@@ -203,6 +205,30 @@ class MainView extends React.Component {
     );
   }
 }
+MainView.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    password: PropTypes.string.isRequired,
+  }),
+  movies: PropTypes.arrayOf(
+    {
+      _id: PropTypes.string,
+      Title: PropTypes.string.isRequired,
+      Description: PropTypes.string.isRequired,
+      ImagePath: PropTypes.string.isRequired,
+      Genre: PropTypes.shape({
+        Name: PropTypes.string.isRequired,
+        Description: PropTypes.string.isRequired,
+      }),
+      Director: PropTypes.shape({
+        Name: PropTypes.string.isRequired,
+        Bio: PropTypes.string.isRequired,
+        Birth: PropTypes.string.isRequired,
+        Death: PropTypes.string,
+      }),
+    }
+  ).isRequired,
+};
 
 let mapStateToProps = (state) => {
   return {
