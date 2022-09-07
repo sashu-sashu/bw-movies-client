@@ -30,7 +30,7 @@ class MainView extends React.Component {
   componentDidMount() {
     let accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
-      this.props({ user: localStorage.getItem("user") });
+      this.setState({ user: localStorage.getItem("user") });
       this.getMovies(accessToken);
     }
   }
@@ -40,7 +40,7 @@ class MainView extends React.Component {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        this.props({
+        this.setState ({
           movies: response.data,
         });
       })
