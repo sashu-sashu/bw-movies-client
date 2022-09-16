@@ -66,7 +66,7 @@ export class MovieView extends React.Component {
       <Container className="movie-view">
         <Row>
           <Col className="movie-poster">
-            <img src={movie.ImagePath} />
+            <img src={movie.ImageURL} />
           </Col>
         </Row>
         <Row className="movie-title">
@@ -132,7 +132,7 @@ MovieView.propTypes = {
       Birth: PropTypes.string.isRequired,
       Death: PropTypes.string,
     }),
-    ImagePath: PropTypes.string.isRequired,
+    ImageURL: PropTypes.string.isRequired,
   }).isRequired,
   onBackClick: PropTypes.func.isRequired,
 };

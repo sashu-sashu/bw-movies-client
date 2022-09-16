@@ -37,7 +37,7 @@ export class MovieCard extends React.Component {
     return (
       <Card id="movie-card">
         <Link to={`/movies/${movie._id}`}>
-          <Card.Img variant="top" src={movie.ImagePath} />
+          <Card.Img variant="top" src={movie.ImageURL} />
         </Link>
       </Card>
     );
@@ -49,14 +49,14 @@ MovieCard.propTypes = {
     _id: PropTypes.string,
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
-    ImagePath: PropTypes.string.isRequired,
+    ImageURL: PropTypes.string,
     Genre: PropTypes.shape({
       Name: PropTypes.string.isRequired,
       Description: PropTypes.string.isRequired,
     }),
     Director: PropTypes.shape({
       Name: PropTypes.string.isRequired,
-      Bio: PropTypes.string.isRequired,
+      Bio: PropTypes.string,
       Birth: PropTypes.string.isRequired,
       Death: PropTypes.string,
     }),

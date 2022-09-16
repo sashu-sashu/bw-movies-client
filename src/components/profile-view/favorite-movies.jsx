@@ -11,7 +11,7 @@ export function FavoriteMovieView(favoriteMoviesList) {
       {favoriteMoviesList.map((movie) => {
         return (
           <div key={movie._id}>
-            <img src={movie.ImagePath} alt={movie.Title} />
+            <img src={movie.ImageURL} alt={movie.Title} />
             <Link to={`/movies/${movie._id}`}>
               <h4>{movie.Title}</h4>
             </Link>

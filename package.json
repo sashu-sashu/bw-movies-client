@@ -25,7 +25,8 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "^5.3.3",
     "redux": "^4.2.0",
-    "redux-devtools-extension": "^2.13.9"
+    "redux-devtools-extension": "^2.13.9",
+    "redux-resource-prop-types": "^4.0.2"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

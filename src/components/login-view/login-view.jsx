@@ -45,6 +45,8 @@ export function LoginView(props) {
         })
         .then((response) => {
           const data = response.data;
+          // localStorage.setItem('token', data.token)
+          // localStorage.setItem('user', data.user.Username)
           props.onLoggedIn(data);
         })
         .catch((err) => {
@@ -93,5 +95,7 @@ LoginView.propTypes = {
     username: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
   }),
+  setMovies: PropTypes.func,
+  setUser: PropTypes.func,
   onLoggedIn: PropTypes.func.isRequired,
 };

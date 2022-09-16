@@ -146,7 +146,7 @@ function ProfileView(props) {
               <Link to={`/movies/${movie._id}`}>
                 <Card.Img
                   className="mb-2"
-                  src={movie.ImagePath}
+                  src={movie.ImageURL}
                   alt={movie.Title}
                 />
               </Link>
@@ -170,7 +170,7 @@ ProfileView.propTypes = {
       _id: PropTypes.string,
       Title: PropTypes.string.isRequired,
       Description: PropTypes.string.isRequired,
-      ImagePath: PropTypes.string.isRequired,
+      ImageURL: PropTypes.string.isRequired,
       Genre: PropTypes.shape({
         Name: PropTypes.string.isRequired,
         Description: PropTypes.string.isRequired,

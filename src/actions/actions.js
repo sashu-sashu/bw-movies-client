@@ -1,5 +1,5 @@
 export const SET_MOVIES = "SET_MOVIES";
-export const SET_USERS = "SET_USERS";
+export const SET_USER = "SET_USER";
 export const SET_FILTER = "SET_FILTER";
 
 export function setMovies(value) {
@@ -9,9 +9,9 @@ export function setMovies(value) {
   };
 }
 
-export function setUsers(value) {
+export function setUser(value) {
   return {
-    type: SET_USERS,
+    type: SET_USER,
     value,
   };
 }
