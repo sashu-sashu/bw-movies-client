@@ -209,7 +209,7 @@ MainView.propTypes = {
     PropTypes.shape({
       Title: PropTypes.string.isRequired,
       Description: PropTypes.string.isRequired,
-      ImageURL: PropTypes.string,
+      ImagePath: PropTypes.string,
       Genre: PropTypes.shape({
         id: PropTypes.string,
         Name: PropTypes.string.isRequired,
